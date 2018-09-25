@@ -1,7 +1,6 @@
 import numpy as np
 from past.builtins import xrange
 
-
 class KNearestNeighbor(object):
   """ a kNN classifier with L2 distance """
 
@@ -86,3 +85,4 @@ class KNearestNeighbor(object):
 
     return y_pred
 
+  
