@@ -100,9 +100,7 @@ def rmsprop(x, dx, config=None):
     # config['cache'].                                                        #
     ###########################################################################
     config['cache'] = config['decay_rate'] * config['cache'] + (1 - config['decay_rate']) * (dx**2)
-
     next_x = x - config['learning_rate'] * dx / (np.sqrt(config['cache']) + config['epsilon'])
-
     #pass
 
     ###########################################################################
