@@ -178,7 +178,6 @@ def conv_backward(dout, cache):
                                                      (dout[n, :, i, j])[:,None ,None, None]), axis=0)
     dx = dx_pad[:,:,pad:-pad,pad:-pad]
     
-    
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -213,7 +212,6 @@ def max_pool_forward(x, pool_param):
         for j in xrange(W_out):
             x_masked = x[:,:,i*stride : i*stride+HH, j*stride : j*stride+WW]
             out[:,:,i,j] = np.max(x_masked, axis=(2,3)) 
-        
         
     ###########################################################################
     #                             END OF YOUR CODE                            #
