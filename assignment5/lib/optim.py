@@ -126,3 +126,5 @@ def adam(x, dx, config=None):
     config['v'] = v
 
     return next_x, config
+
+  
