@@ -56,6 +56,7 @@ class ThreeLayerConvNet(object):
         self.params['b3'] = np.zeros(num_classes)
 
         #pass
+        
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
@@ -87,10 +88,12 @@ class ThreeLayerConvNet(object):
         # computing the class scores for X and storing them in the scores          #
         # variable.                                                                #
         ############################################################################
+        
         conv_forward_out_1, cache_forward_1 = conv_relu_pool_forward(X, self.params['W1'], self.params['b1'], conv_param, pool_param)
         affine_forward_out_2, cache_forward_2 = affine_forward(conv_forward_out_1, self.params['W2'], self.params['b2'])
         affine_relu_2, cache_relu_2 = relu_forward(affine_forward_out_2)
         scores, cache_forward_3 = affine_forward(affine_relu_2, self.params['W3'], self.params['b3'])
+        
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
