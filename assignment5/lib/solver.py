@@ -10,7 +10,6 @@ import numpy as np
 
 from lib import optim
 
-
 class Solver(object):
     """
     A Solver encapsulates all the logic necessary for training classification
